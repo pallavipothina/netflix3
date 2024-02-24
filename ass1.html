@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common Values</title>
+</head>
+<body>
+
+<script>
+  // Define two arrays
+  var array1 = [1, 2, 3, 4, 5];
+  var array2 = [3, 4, 5, 6, 7];
+
+  // Function to find common values
+  function findCommonValues(arr1, arr2) {
+    var commonValues = [];
+    for (var i = 0; i < arr1.length; i++) {
+      if (arr2.indexOf(arr1[i]) !== -1) {
+        commonValues.push(arr1[i]);
+      }
+    }
+    return commonValues;
+  }
+
+  // Find and print common values
+  var commonValues = findCommonValues(array1, array2);
+  document.write("<p>Common Values: " + commonValues.join(", ") + "</p>");
+</script>
+
+</body>
+</html>
